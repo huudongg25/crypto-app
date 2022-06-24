@@ -32,6 +32,16 @@ function Vaults() {
           font-size: 62.5%;
         }
 
+        body::-webkit-scrollbar {
+          width: 4px;
+          background: #000;
+        }
+
+        body::-webkit-scrollbar-thumb {
+          background-color: #77838f;
+          border-radius: 20px;
+        }
+
         * {
           box-sizing: border-box;
         }

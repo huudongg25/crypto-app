@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../layout";
+import PayPage from "../components/payPage";
 
 function Pay() {
   return (
@@ -15,14 +16,10 @@ function Pay() {
       </Head>
       <main>
         <Layout>
-          <h1>Pay site</h1>
+          <PayPage />
         </Layout>
       </main>
       <style jsx global>{`
-        h1 {
-          margin: 250px 0 0 700px;
-          font-size: 30px;
-        }
         html,
         body {
           color: #fff;
@@ -30,6 +27,16 @@ function Pay() {
           margin: 0;
           font-family: "Brinnan";
           font-size: 62.5%;
+        }
+
+        body::-webkit-scrollbar {
+          width: 4px;
+          background: #000;
+        }
+
+        body::-webkit-scrollbar-thumb {
+          background-color: #77838f;
+          border-radius: 20px;
         }
 
         * {
