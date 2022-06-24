@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../layout";
 
-function Swap() {
+function More() {
   return (
     <div className="container">
       <Head>
@@ -50,4 +50,4 @@ function Swap() {
   );
 }
 
-export default Swap;
+export default More;
