@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./ProfileModal.module.scss";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import ReactDOM from "react-dom";
+import Link from "next/link";
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +30,9 @@ function ProfileModal({ isShowing, hide }) {
               <li className={cx("item-btn")}>Referrals</li>
               <li className={cx("item-btn")}>Help Center</li>
               <li className={cx("item-btn")}>Notifications</li>
-              <li className={cx("item-btn")}>Sign out</li>
+              <Link href="/">
+                <li className={cx("item-btn")}>Sign out</li>
+              </Link>
             </ul>
           </div>
         </div>,

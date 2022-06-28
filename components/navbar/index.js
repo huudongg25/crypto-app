@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const cx = classNames.bind(styles);
-let newTab;
+let newTab = "tab-1";
 
 function Navbar() {
   const [active, setActive] = useState(newTab);
@@ -51,7 +51,7 @@ function Navbar() {
               active === "tab-1" ? cx("nav-item", "active") : cx("nav-item")
             }
           >
-            <Link href="/">
+            <Link href="/home">
               <div>
                 <FaHome className={cx("nav-icon")} />
                 <a className={cx("nav-name")} href="">

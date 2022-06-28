@@ -86,13 +86,17 @@
   padding-bottom: 18px;
   margin-bottom: 22px;
   border-bottom: 1px solid #2f2f2f;
+  transition: 0.2s;
 }
 
 .item-btn:last-child {
-  color: #ff5c5c;
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.item-btn:hover {
+  color: #ff5c5c;
 }
 
 @keyframes scale-in-right {

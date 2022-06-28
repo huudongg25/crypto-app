@@ -1,8 +1,9 @@
-import Login from "../components/loginPage";
-import Head from "next/dist/shared/lib/head";
+import Head from "next/head";
+import Layout from "../layout";
 import "normalize.css";
+import SwapPage from "../components/swapPage";
 
-export default function LoginPage() {
+export default function Home() {
   return (
     <div className="container">
       <Head>
@@ -16,7 +17,9 @@ export default function LoginPage() {
       </Head>
 
       <main>
-        <Login />
+        <Layout>
+          <SwapPage />
+        </Layout>
       </main>
 
       <style jsx global>{`
