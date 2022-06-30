@@ -15,7 +15,7 @@ function Pay() {
         />
       </Head>
       <main>
-        <Layout>
+        <Layout namePage={"Pay"}>
           <PayPage />
         </Layout>
       </main>

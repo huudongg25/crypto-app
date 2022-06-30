@@ -14,7 +14,7 @@ function Vaults() {
         />
       </Head>
       <main>
-        <Layout>
+        <Layout namePage={"Vaults"}>
           <h1>Vaults site</h1>
         </Layout>
       </main>

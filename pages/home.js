@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "../layout";
 import "normalize.css";
-import SwapPage from "../components/swapPage";
 
 export default function Home() {
   return (
@@ -17,8 +16,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <Layout>
-          <SwapPage />
+        <Layout namePage={"Home"}>
+          <h1 style={{ marginLeft: 400, marginTop: 200, fontSize: 30 }}>
+            This is HomePage
+          </h1>
         </Layout>
       </main>
 

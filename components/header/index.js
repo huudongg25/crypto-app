@@ -5,14 +5,14 @@ import ProfileModal from "./modalProfile";
 import useModal from "../../customHooks";
 
 const cx = classNames.bind(styles);
-function Header() {
+function Header({ namePage }) {
   const { isShowing, toggle } = useModal();
 
   return (
     <header className={cx("header")}>
       <ProfileModal isShowing={isShowing} hide={toggle} />
       <div className={cx("header-container")}>
-        <h3 className={cx("header-page")}>Swap</h3>
+        <h3 className={cx("header-page")}>{namePage}</h3>
         <div className={cx("header-action")}>
           <div className={cx("header-logo")}>
             <img

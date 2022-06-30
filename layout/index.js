@@ -6,11 +6,11 @@ import { children } from "react";
 
 const cx = classNames.bind(styles);
 
-function Layout({ children }) {
+function Layout({ children, namePage }) {
   return (
     <div className={cx("wrapper")}>
       <div className={cx("header")}>
-        <Header />
+        <Header namePage={namePage} />
       </div>
       <div className={cx("navbar")}>
         <Navbar />

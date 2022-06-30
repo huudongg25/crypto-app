@@ -14,7 +14,7 @@ function More() {
         />
       </Head>
       <main>
-        <Layout>
+        <Layout namePage={"More"}>
           <h1>More site</h1>
         </Layout>
       </main>

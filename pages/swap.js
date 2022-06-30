@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../layout";
+import SwapPage from "../components/swapPage";
 
 function Swap() {
   return (
@@ -14,8 +15,8 @@ function Swap() {
         />
       </Head>
       <main>
-        <Layout>
-          <h1>Swap site</h1>
+        <Layout namePage={"Swap"}>
+          <SwapPage />
         </Layout>
       </main>
       <style jsx global>{`
