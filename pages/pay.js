@@ -48,6 +48,11 @@ function Pay() {
           margin: 0;
           list-style: none;
         }
+
+        button {
+          font-family: "Brinnan";
+        }
+
         a {
           text-decoration: none;
           color: #fff;

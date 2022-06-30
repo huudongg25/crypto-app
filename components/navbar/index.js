@@ -3,15 +3,18 @@ import styles from "./Navbar.module.scss";
 import { FaHome } from "react-icons/fa";
 import { BsThreeDotsVertical, BsLink } from "react-icons/bs";
 import { VscArrowSwap } from "react-icons/vsc";
+import { IoIosArrowUp } from "react-icons/io";
 import { HiOutlineChartPie } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
 
 const cx = classNames.bind(styles);
 let newTab = "tab-1";
-
+let sub = "";
 function Navbar() {
   const [active, setActive] = useState(newTab);
+  const [open, setOpen] = useState(false);
+  const [subNav, setSubNav] = useState(sub);
 
   const setTabs1 = () => {
     setActive("tab-1");
@@ -29,9 +32,34 @@ function Navbar() {
     setActive("tab-4");
     newTab = "tab-4";
   };
-  const setTabs5 = () => {
-    setActive("tab-5");
-    newTab = "tab-5";
+
+  const handleSetOpenSubNav = () => {
+    setOpen(!open);
+  };
+
+  const handleSetSubNav1 = (e) => {
+    e.stopPropagation();
+    setSubNav("tab-1");
+  };
+
+  const handleSetSubNav2 = (e) => {
+    e.stopPropagation();
+    setSubNav("tab-2");
+  };
+
+  const handleSetSubNav3 = (e) => {
+    e.stopPropagation();
+    setSubNav("tab-3");
+  };
+
+  const handleSetSubNav4 = (e) => {
+    e.stopPropagation();
+    setSubNav("tab-4");
+  };
+
+  const handleSetSubNav5 = (e) => {
+    e.stopPropagation();
+    setSubNav("tab-5");
   };
 
   return (
@@ -105,20 +133,68 @@ function Navbar() {
               </div>
             </Link>
           </li>
-          <li
-            onClick={setTabs5}
-            className={
-              active === "tab-5" ? cx("nav-item", "active") : cx("nav-item")
-            }
-          >
-            <Link href="/more">
-              <div>
-                <BsThreeDotsVertical className={cx("nav-icon")} />
-                <a className={cx("nav-name")} href="">
-                  More
-                </a>
-              </div>
-            </Link>
+          <li onClick={handleSetOpenSubNav} className={cx("nav-item")}>
+            <div className={cx("nav-name")}>
+              <BsThreeDotsVertical className={cx("nav-icon")} />
+              More
+              <IoIosArrowUp
+                className={
+                  open ? cx("arrow-sub-nav", "active") : cx("arrow-sub-nav")
+                }
+              />
+            </div>
+            <ul className={open ? cx("sub-nav", "active") : cx("sub-nav")}>
+              <li
+                onClick={handleSetSubNav1}
+                className={
+                  subNav === "tab-1"
+                    ? cx("sub-nav-item", "active")
+                    : cx("sub-nav-item")
+                }
+              >
+                Docs
+              </li>
+              <li
+                onClick={handleSetSubNav2}
+                className={
+                  subNav === "tab-2"
+                    ? cx("sub-nav-item", "active")
+                    : cx("sub-nav-item")
+                }
+              >
+                Referrals
+              </li>
+              <li
+                onClick={handleSetSubNav3}
+                className={
+                  subNav === "tab-3"
+                    ? cx("sub-nav-item", "active")
+                    : cx("sub-nav-item")
+                }
+              >
+                Settings
+              </li>
+              <li
+                onClick={handleSetSubNav4}
+                className={
+                  subNav === "tab-4"
+                    ? cx("sub-nav-item", "active")
+                    : cx("sub-nav-item")
+                }
+              >
+                Help Center
+              </li>
+              <li
+                onClick={handleSetSubNav5}
+                className={
+                  subNav === "tab-5"
+                    ? cx("sub-nav-item", "active")
+                    : cx("sub-nav-item")
+                }
+              >
+                Notifications
+              </li>
+            </ul>
           </li>
         </ul>
       </div>

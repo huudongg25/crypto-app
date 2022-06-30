@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Layout from "../layout";
+import Vaults from "../components/vaultsPage";
 
-function Vaults() {
+function VaultsPage() {
   return (
     <div className="container">
       <Head>
@@ -15,14 +16,10 @@ function Vaults() {
       </Head>
       <main>
         <Layout namePage={"Vaults"}>
-          <h1>Vaults site</h1>
+          <Vaults />
         </Layout>
       </main>
       <style jsx global>{`
-        h1 {
-          margin: 250px 0 0 700px;
-          font-size: 30px;
-        }
         html,
         body {
           color: #fff;
@@ -40,6 +37,10 @@ function Vaults() {
         body::-webkit-scrollbar-thumb {
           background-color: #77838f;
           border-radius: 20px;
+        }
+
+        button {
+          font-family: "Brinnan";
         }
 
         * {
@@ -60,4 +61,4 @@ function Vaults() {
   );
 }
 
-export default Vaults;
+export default VaultsPage;

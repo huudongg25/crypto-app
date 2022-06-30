@@ -47,6 +47,10 @@ function Swap() {
           box-sizing: border-box;
         }
 
+        button {
+          font-family: "Brinnan";
+        }
+
         ul {
           padding: 0;
           margin: 0;
