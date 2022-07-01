@@ -352,7 +352,7 @@ function Vaults() {
               </div>
               <div className={cx("earnings-group")}>
                 <span className={cx("earnings-title")}>Earnings</span>
-                <p className={cx("earnings-count")}>-</p>
+                <p className={`${cx("earnings-count")} col`}>-</p>
               </div>
             </div>
           </div>

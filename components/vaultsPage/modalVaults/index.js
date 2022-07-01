@@ -9,6 +9,7 @@ const cx = className.bind(styles);
 function ModalVaults({ isShowing, hide }) {
   const [active, setActive] = useState("tab-1");
   const [select, setSelect] = useState("sl-1");
+  const [balance, setBalance] = useState("1000");
 
   const handleStop = (e) => {
     e.stopPropagation();
@@ -28,18 +29,22 @@ function ModalVaults({ isShowing, hide }) {
 
   const handleSelected1 = () => {
     setSelect("sl-1");
+    setBalance(balance * 2);
   };
 
   const handleSelected2 = () => {
     setSelect("sl-2");
+    setBalance(balance * 4);
   };
 
   const handleSelected3 = () => {
     setSelect("sl-3");
+    setBalance(balance * 6);
   };
 
   const handleSelected4 = () => {
     setSelect("sl-4");
+    setBalance(balance * 10);
   };
 
   return isShowing
@@ -85,7 +90,9 @@ function ModalVaults({ isShowing, hide }) {
             >
               <div className={cx("balance")}>
                 <span>$</span>
-                <p className={cx("balance-num")}>10,000</p>
+                <p className={cx("balance-num")}>
+                  {new Intl.NumberFormat().format(balance)}
+                </p>
                 <p className={cx("balance-max")}>Max</p>
               </div>
               <div className={cx("selection")}>
@@ -137,7 +144,9 @@ function ModalVaults({ isShowing, hide }) {
                 </ul>
                 <div className={cx("count")}>
                   <span className={cx("count-balance")}>Balance</span>
-                  <span className={cx("count-num")}>10,000 USDC</span>
+                  <span className={cx("count-num")}>
+                    {new Intl.NumberFormat().format(balance)} USDC
+                  </span>
                 </div>
               </div>
               <button className={cx("btn-content")}>Deposit Funds</button>
