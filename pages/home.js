@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Layout from "../layout";
 import "normalize.css";
+import Home from "../components/homePage";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="container">
       <Head>
@@ -17,9 +18,7 @@ export default function Home() {
 
       <main>
         <Layout namePage={"Home"}>
-          <h1 style={{ marginLeft: 400, marginTop: 200, fontSize: 30 }}>
-            This is HomePage
-          </h1>
+          <Home />
         </Layout>
       </main>
 
